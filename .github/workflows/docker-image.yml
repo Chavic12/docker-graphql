@@ -29,10 +29,14 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t chavi12/docker-graphql:0.0.2 .
+        docker build -t chavi12/docker-graphql:latest .
+        
         
     - name: Push Docker Image
       run: |
         docker push chavi12/docker-graphql:0.0.2
+        docker push chavi12/docker-graphql:latest
+        
         
         
         
